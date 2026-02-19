@@ -115,7 +115,8 @@ body {
     padding: 1rem 1rem 0rem;
 
     div {
-        display: flex;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
         gap: 10px;
         margin: 1.5rem;
     }
@@ -146,4 +147,22 @@ footer {
     align-items: center;
     justify-content: center;
     background-color: #fabada;
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 600px) {
+    body {
+        font-size: 14px; /* Tamaño de fuente más pequeño */
+    }
+
+    .life, .reviews-section>div{
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Estilos para pantallas grandes */
+@media (min-width: 1025px) {
+    body {
+        font-size: 18px; /* Tamaño de fuente más grande */
+    }
 }
