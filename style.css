@@ -1,0 +1,149 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff9f9;
+}
+
+.cabecera {
+    padding: 15px;
+
+    section {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.navegador {
+    justify-content: space-between;
+}
+
+.subcabecera {
+    justify-content: center;
+    height: 150px;
+}
+
+.foto-nombre {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+
+    img {
+        border-radius: 50%;
+        height: 44px;
+    }
+}
+
+.life {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    width: 100%;
+    border: 2px solid #000909;
+
+    >article {
+        padding: 1rem 1rem 0rem;
+    }
+}
+
+.projects-section {
+    display: flex;
+    flex-direction: column;
+
+
+    .list {
+        display: flex;
+        flex-direction: column;
+        height: 400px;
+        justify-content: space-between;
+
+        &:hover .project:not(:hover) {
+            flex: 0.7;
+        }
+    }
+}
+
+.project {
+    position: relative;
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: flex 0.4s ease;
+
+    .description {
+        display: none;
+        transform: translateY(10px);
+        opacity: 0;
+        transition: all 0.3s ease;
+        pointer-events: none;
+    }
+
+    &:hover {
+        flex: 3;
+        transform: translateY(0);
+    }
+
+    &:hover .description {
+        display: block;
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+}
+
+.experience-section {
+    border: #000909 solid;
+    border-width: 0px 1px 0px;
+
+    .list {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 10px;
+
+        ul {
+            list-style-type: none;
+        }
+    }
+}
+
+.reviews-section {
+    padding: 1rem 1rem 0rem;
+
+    div {
+        display: flex;
+        gap: 10px;
+        margin: 1.5rem;
+    }
+}
+
+.review {
+    padding: 1rem;
+    background-color: #000909;
+    border-radius: 20px;
+    color: #fff9f9;
+}
+
+
+
+
+form {
+    width: 20em;
+    display: flex;
+    flex-direction: column;
+}
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2.5rem;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+    background-color: #fabada;
+}
