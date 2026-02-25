@@ -44,6 +44,7 @@ main {
     gap: 10px;
     align-items: center;
     justify-content: space-between;
+    font-family: monospace;
 
     img {
         border-radius: 50%;
@@ -244,11 +245,29 @@ footer {
         /* Tamaño de fuente más pequeño */
     }
 
+
+    .navegador {
+        flex-direction: column;
+
+        .foto-nombre {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            justify-content: space-between;
+            font-size: xx-large;
+
+            img {
+                border-radius: 50%;
+                height: 60px;
+            }
+        }
+    }
+
     .menu {
         /* visibility: hidden;
         display: flex;
         flex-direction: column; */
-
+        padding: 0.5rem;
     }
 
     .life {
@@ -301,100 +320,3 @@ footer {
         margin: auto;
     }
 }
-
-/* .menu-mobile {
-    align-items: center;
-    background-color: transparent;
-    clip-path: polygon(81.05% 9.1%, 92% 9.1%, 92% 10.1%, 81.05% 10.1%);
-    color: #fff9f9;
-    display: flex;
-    flex-direction: column;
-    font-family: sans-serif;
-    font-size: 28px;
-    height: 60%;
-    position: absolute;
-    top: 0;
-    transition: clip-path 400ms cubic-bezier(0.4, 0, 0.2, 1),
-        background-color 400ms cubic-bezier(0.4, 0, 0.2, 1);
-    width: 100%;
-}
-
-.active .menu-mobile {
-    background-color: #e07a8d;
-    clip-path: polygon(101% -1%, 101% 101%, -1% 101%, -1% -1%);
-}
-
-.options {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    margin-top: 60px;
-    transform: scale(0.8);
-    transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.option {
-    cursor: pointer;
-    margin: 8px 0;
-}
-
-.option.selected {
-    color: #a02f56;
-}
-
-.active .options {
-    transform: scale(1);
-}
-
-.x {
-    pointer-events: none;
-    position: absolute;
-    top: 0;
-}
-
-.top-bars {
-    stroke: #001626;
-    transition: stroke 400ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.active .top-bars {
-    stroke: #fff9f9;
-}
-
-.bar {
-    transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.bar1 {
-    transform-origin: 190px 20.5px;
-}
-
-.bar2 {
-    transform-origin: 190px 28.5px;
-}
-
-.bar3 {
-    transform-origin: 190px 28.5px;
-}
-
-.active .bar1 {
-    transform: translateY(8.6px) rotate(45deg);
-}
-
-.active .bar2 {
-    transform: rotate(-45deg);
-}
-
-.active .bar3 {
-    transform: translateX(-6px) translateY(-6px) rotate(-45deg);
-}
-
-.menu-click-area {
-    cursor: pointer;
-    height: 40px;
-    opacity: 0.3;
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    width: 40px;
-} */
