@@ -5,6 +5,9 @@
 
 body {
     font-family: 'Poppins', sans-serif;
+}
+
+main {
     background-color: #fff9f9;
 }
 
@@ -112,11 +115,23 @@ body {
 }
 
 .reviews-section {
+
     padding: 1rem 1rem 0rem;
 
     div {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        display: flex;
+    }
+
+    .section-wrapper {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .list {
+        width: 500px;
+        justify-content: start;
+        overflow-x: auto;
+        scrollbar-width: none;
         gap: 10px;
         margin: 1.5rem;
     }
@@ -124,19 +139,81 @@ body {
 
 .review {
     padding: 1rem;
-    background-color: #000909;
-    border-radius: 20px;
+    width: 400px;
+    flex-shrink: 0;
+    background-color: #001626;
+    border-radius: 5px;
     color: #fff9f9;
 }
 
-
-
-
-form {
-    width: 20em;
-    display: flex;
-    flex-direction: column;
+.scroll {
+    cursor: pointer;
+    background-color: transparent;
+    border: transparent;
+    height: 50px;
+    width: 50px;
 }
+
+
+
+.form-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    div {
+        display: flex;
+    }
+
+    .form-div {
+        height: 15em;
+        margin: 0px 120px;
+        padding: 100px 0px;
+        border-radius: 10px;
+        justify-content: center;
+        align-items: center;
+        background-color: red;
+        box-shadow: 5px 5px 10px #001626;
+    }
+
+
+    form {
+        width: 20em;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        input {
+            height: 2.5em;
+        }
+
+        input,
+        textarea {
+            background-color: #fff9f9;
+            color: #000909;
+            border: none;
+            border-radius: 5px
+        }
+
+        #enviar {
+            margin-top: 20px;
+            background-color: #001626;
+            color: #fff9f9;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+
+        #mensaje {
+            height: 5rem;
+        }
+    }
+
+    .contact-div {
+        align-items: center;
+        justify-content: end;
+    }
+}
+
 
 
 footer {
@@ -152,17 +229,24 @@ footer {
 /* Estilos para pantallas pequeñas */
 @media (max-width: 600px) {
     body {
-        font-size: 14px; /* Tamaño de fuente más pequeño */
+        font-size: 14px;
+        /* Tamaño de fuente más pequeño */
     }
 
-    .life, .reviews-section>div{
+    .life {
         grid-template-columns: 1fr;
+    }
+
+    .reviews-section>div {
+        /*Añadir ancho responsive*/
+        background-color: aqua;
     }
 }
 
 /* Estilos para pantallas grandes */
 @media (min-width: 1025px) {
     body {
-        font-size: 18px; /* Tamaño de fuente más grande */
+        font-size: 18px;
+        /* Tamaño de fuente más grande */
     }
 }
