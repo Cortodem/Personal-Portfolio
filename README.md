@@ -1,7 +1,7 @@
 https://roadmap.sh/projects/portfolio-website
 # Personal Portfolio
 
-A personal portfolio website built as part of the [roadmap.sh](https://roadmap.sh) frontend development learning path.
+A personal portfolio website built as part of the [roadmap.sh](https://roadmap.sh/projects/portfolio-website) frontend development learning path.
 
 ## Overview
 
@@ -28,11 +28,11 @@ This project demonstrates core web development skills including HTML, CSS, and J
 
 ## Live Demo
 
-[View Portfolio](https://roadmap.sh/projects/portfolio-website)
+[View Portfolio](https://cortodem.github.io/Personal-Portfolio/)
 
 ## Author
 
-Fernando González Rebollo
+Fernando González Rebollo (Corto de Mirass)
 
 ## License
 
