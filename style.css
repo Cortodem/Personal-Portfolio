@@ -20,6 +20,75 @@ main {
     }
 }
 
+nav {
+    display: flex;
+    justify-content: center;
+
+    .nav-link {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding: 20px;
+        width: auto;
+        color: var(--accent);
+
+        .tooltip {
+            width: 200px;
+            padding: 12px 0;
+            font-size: 14px;
+            text-align: center;
+            color: var(--today);
+            background-color: #333;
+            pointer-events: none;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            visibility: hidden;
+            opacity: 0;
+            border-radius: 7px;
+            transition: all .4s ease;
+
+        }
+        .slide-in {
+            transform: translateX(-50%) translateY(-10px);
+        }
+
+        .scale-in{
+            transform: translateX(-50%) translateY(-30px) scale(0);
+        }
+
+        .tooltip::before {
+            content: '';
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent #333 transparent;
+        }
+    }
+
+
+
+    .nav-link:hover,
+    .nav-link:focus {
+        .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .slide-in {
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .scale-in{
+            transform: translateX(-50%) translateY(0) scale(1);
+        }
+    }
+}
+
 .navegador {
     justify-content: space-between;
 
@@ -28,7 +97,7 @@ main {
         text-decoration: none;
     }
 
-    .selected>a {
+    .selected {
         color: red;
         font-weight: 550;
     }
